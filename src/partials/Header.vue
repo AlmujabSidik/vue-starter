@@ -14,6 +14,10 @@ const navbar = [
     path: "/",
   },
   {
+    name: "Starter",
+    path: "/starter",
+  },
+  {
     name: "Projects",
     path: "#",
     child: [
@@ -28,6 +32,10 @@ const navbar = [
       {
         name: "News",
         path: "/project/news",
+      },
+      {
+        name: "Animation",
+        path: "/project/animation",
       },
     ],
   },
