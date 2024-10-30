@@ -1,11 +1,12 @@
 <script setup>
 import Button from "@/components/ui/button/Button.vue";
 import { EyeOpenIcon, Pencil2Icon, TrashIcon } from "@radix-icons/vue";
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 import { defineProps, ref } from "vue";
 import DeleteConfirmationDialog from "@/components/DeletConfirmationDialog.vue";
 
 const router = useRouter();
+const route = useRoute();
 
 const props = defineProps({
   product: {
@@ -19,6 +20,12 @@ const emit = defineEmits(["delete-product"]);
 function goToDetailProduct() {
   router.push(`/project/products/${props.product.id}`);
 }
+const goToEditProduct = (id) => {
+  router.push({
+    path: `/project/products/${props.product.id}/edit`,
+    query: { fromPage: route.query.page || "1" },
+  });
+};
 
 const showDeleteDialog = ref(false);
 
@@ -57,7 +64,7 @@ const handleDeleteCancel = () => {
       <Button @click="goToDetailProduct" size="icon" variant="ghost">
         <EyeOpenIcon class="w-4 h-4" />
       </Button>
-      <Button size="icon" variant="ghost">
+      <Button @click="goToEditProduct(product.id)" size="icon" variant="ghost">
         <Pencil2Icon class="w-4 h-4" />
       </Button>
       <Button @click="deleteProduct(product.id)" size="icon" variant="ghost">

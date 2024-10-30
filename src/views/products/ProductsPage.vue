@@ -6,7 +6,6 @@ import ProductPagination from "./ProductPagination.vue";
 import axios from "axios";
 import Button from "@/components/ui/button/Button.vue";
 import Spinner from "@/components/Spinner.vue";
-import ProductDetail from "./ProductDetail.vue";
 
 const route = useRoute();
 const router = useRouter();
@@ -39,14 +38,6 @@ const fetchProducts = async () => {
   }
 };
 
-function changePage(newPage) {
-  if (newPage < 1 || newPage > lastPage.value) return;
-
-  router.push({
-    query: { ...route.query, page: newPage },
-  });
-}
-
 const deleteProduct = async (id) => {
   try {
     isLoading.value = true;
@@ -59,6 +50,18 @@ const deleteProduct = async (id) => {
   } finally {
     isLoading.value = false;
   }
+};
+
+function changePage(newPage) {
+  if (newPage < 1 || newPage > lastPage.value) return;
+
+  router.push({
+    query: { ...route.query, page: newPage },
+  });
+}
+
+const goToCreateProduct = () => {
+  router.push("/project/products/create");
 };
 
 watchEffect(async () => {
@@ -83,7 +86,7 @@ watchEffect(async () => {
           </p>
         </div>
         <div class="mt-3 md:mt-0">
-          <Button size="sm">Add product</Button>
+          <Button @click="goToCreateProduct" size="sm">Add product</Button>
         </div>
       </div>
       <div class="mt-12 shadow-sm border rounded-lg overflow-x-auto">

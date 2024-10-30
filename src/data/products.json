@@ -92,11 +92,11 @@
       "image": "https://placehold.co/400"
     },
     {
-      "id": "24",
-      "title": "Smart Doorbell Camera",
+      "title": "New Smart Doorbell Camera",
       "description": "Enhance your home security with this smart doorbell camera featuring real-time video and two-way communication.",
-      "price": 179.99,
-      "image": "https://placehold.co/400"
+      "price": 200,
+      "image": "https://placehold.co/400",
+      "id": "24"
     },
     {
       "id": "25",
@@ -190,11 +190,11 @@
       "image": "https://placehold.co/400"
     },
     {
-      "id": "38",
-      "title": "Wireless Gaming Mouse",
+      "title": "Bluetooth Gaming Mouse",
       "description": "Enhance your gaming experience with this wireless gaming mouse featuring customizable RGB lighting and precision sensors.",
-      "price": 79.99,
-      "image": "https://placehold.co/400"
+      "price": 90,
+      "image": "https://placehold.co/400",
+      "id": "38"
     },
     {
       "id": "39",
@@ -281,24 +281,38 @@
       "image": "https://placehold.co/400"
     },
     {
-      "id": "54",
-      "title": "Smart Home Weather Station",
+      "title": "Smart Home Weather Station Red",
       "description": "Stay informed about the weather conditions with this smart home weather station featuring sensors for accurate readings.",
-      "price": 79.99,
-      "image": "https://placehold.co/400"
+      "price": 90,
+      "image": "https://placehold.co/400",
+      "id": "54"
     },
     {
-      "id": "55",
       "title": "High-Speed Document Scanner",
       "description": "Efficiently digitize your documents with this high-speed document scanner, perfect for home offices and businesses.",
-      "price": 249.99,
-      "image": "https://placehold.co/400"
+      "price": 300,
+      "image": "https://placehold.co/400",
+      "id": "55"
     },
     {
       "id": "56",
       "title": "Foldable Drone with Camera",
       "description": "Capture aerial views with this foldable drone featuring a built-in camera and intelligent flight modes.",
       "price": 499.99,
+      "image": "https://placehold.co/400"
+    },
+    {
+      "id": "b5b1",
+      "title": "Product Recusandae Nihil la",
+      "description": "Non odio suscipit la",
+      "price": 599,
+      "image": "https://placehold.co/400"
+    },
+    {
+      "id": "51fe",
+      "title": "Accusamus nostrud co",
+      "description": "Veniam omnis ullam ",
+      "price": 431,
       "image": "https://placehold.co/400"
     }
   ]
